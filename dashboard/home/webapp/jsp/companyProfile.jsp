@@ -29,7 +29,7 @@ import= "java.util.ArrayList"
 
 <h2><%= request.getParameter("name")%></h2>
 
- <md-button md-no-ink class="md-raised md-warn" layout layout-align="center stretch">
+ <md-button md-no-ink class="md-raised md-warn" layout layout-align="center center">
  <span>Predicted Time to become a customer<br> 145 </span>
  </md-button>
 
