@@ -1,0 +1,13 @@
+md-nav-bar .md-nav-bar {
+  background: #444444;
+  color: #ffffff;
+}
+
+md-content {
+    background-color : #444444;
+    color: #ffffff;
+}
+
+body {
+    background-color : #ffffff;
+}

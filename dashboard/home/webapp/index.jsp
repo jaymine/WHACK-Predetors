@@ -16,12 +16,54 @@ import= "java.util.ArrayList"
 
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <title>cluster monitor</title>
+    <title>Exito</title>
 </head>
 
-
 <body ng-app="DeploymentMonitor"  ng-controller="AppCtrl" ng-cloak >
-hi
+
+    <md-content class="md-padding" flex>
+
+        <div layout="row" layout-align="space-between center">
+
+                <img ng-src="img/logo.png" ng-style="{height:'60px'}"/>
+
+                <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
+                  <md-nav-item md-nav-click="goto('home')" name="index.html" class="md-secondary">
+                    <span ng-style="{color:'#e3e5ef'}" >
+                    HOME
+                    </span>
+                  </md-nav-item>
+                  <md-nav-item md-nav-click="goto('bant')" name="jsp/pageBANT.jsp" class="md-secondary">
+                      <span ng-style="{color:'#e3e5ef'}">
+                      BANT
+                      </span>
+                  </md-nav-item>
+                  <md-nav-item md-nav-click="goto('sql')" name="jsp/pageSQL.jsp" class="md-secondary">
+                      <span ng-style="{color:'#e3e5ef'}">
+                      SQL
+                      </span>
+                  </md-nav-item>
+                  <md-nav-item md-nav-click="goto('raw')" name="jsp/pageRAWLEAD.jsp" class="md-secondary">
+                      <span ng-style="{color:'#e3e5ef'}">
+                      RAW LEAD
+                      </span>
+                  </md-nav-item>
+                </md-nav-bar>
+        </div>
+
+    </md-content>
+
+     <div class="ext-content" id="content" style="width:100%; height: 100%;">
+         <object type="text/html" data="jsp/pageHome.jsp" style="width:100%; height: 100%;"></object>
+     </div>
+
+    <!-- footer-->
+     <div layout="row" layout-align="space-between end">
+         <md-content class="md-padding" flex>
+            <md-nav-bar md-selected-nav-item="currentNavItem1" nav-bar-aria-label="navigation links">
+            </md-nav-bar>
+         </md-content>
+     </div>
 
 <!-- Angular Material requires Angular.js Libraries -->
 <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
@@ -39,11 +81,31 @@ hi
 
         deploymentMonitor.controller('AppCtrl', function($scope, $mdDialog) {
 
-              $scope.redirectToHome = function() {
-                window.location = "index.jsp";
+
+
+              $scope.indexpage =
+              '<object type="text/html" data="jsp/pageHome.jsp" style="width:100%; height: 100%;"></object>';
+              $scope.bantpage =
+              '<span><object type="text/html" data="jsp/pageBANT.jsp" style="width:100%; height: 100%;"></object></span>';
+              $scope.sqlpage =
+              '<span><object type="text/html" data="jsp/pageSQL.jsp" style="width:100%; height: 100%;"></object></span>';
+              $scope.rawleadpage =
+              '<span><object type="text/html" data="jsp/pageRAWLEAD.jsp" style="width:100%; height: 100%;"></object></span>';
+
+              $scope.goto = function(pageName) {
+                if (pageName == 'home') {
+                    document.getElementById("content").innerHTML= $scope.indexpage;
+                }
+                if (pageName == 'bant') {
+                    document.getElementById("content").innerHTML= $scope.bantpage;
+                }
+                if (pageName == 'sql') {
+                    document.getElementById("content").innerHTML= $scope.sqlpage;
+                }
+                if (pageName == 'raw') {
+                    document.getElementById("content").innerHTML= $scope.rawleadpage;
+                }
               }
-
-
 
         });
 
