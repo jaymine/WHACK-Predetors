@@ -153,7 +153,7 @@ import= "java.util.ArrayList"
                                             value: "5"
                                         },
                                         {
-                                            value: "7"
+                                            value: "8"
                                         }
                                     ]
                                 },
@@ -169,10 +169,10 @@ import= "java.util.ArrayList"
                                             value: "10"
                                         },
                                         {
-                                            value: "5"
+                                            value: "7"
                                         },
                                         {
-                                            value: "7"
+                                            value: "8"
                                         }
 
                                     ]

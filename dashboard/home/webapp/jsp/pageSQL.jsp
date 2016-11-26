@@ -124,28 +124,28 @@ import= "java.util.ArrayList"
                                     seriesname: "Predicted Customers",
                                     data: [
                                         {
-                                            value: "21"
+                                            value: "3567"
                                         },
                                         {
-                                            value: "11"
+                                            value: "2340"
                                         },
                                         {
-                                            value: "6"
+                                            value: "1677"
                                         },
                                         {
-                                            value: "8"
+                                            value: "3201"
                                         },
                                         {
-                                            value: "23"
+                                            value: "4600"
                                         },
                                         {
-                                            value: "13"
+                                            value: "1800"
                                         },
                                         {
-                                            value: "5"
+                                            value: "1406"
                                         },
                                         {
-                                            value: "7"
+                                            value: "3600"
                                         }
                                     ]
                                 },
@@ -155,16 +155,16 @@ import= "java.util.ArrayList"
                                     showvalues: "0",
                                     data: [
                                         {
-                                            value: "17"
+                                            value: "2700"
                                         },
                                         {
-                                            value: "10"
+                                            value: "1905"
                                         },
                                         {
-                                            value: "5"
+                                            value: "1700"
                                         },
                                         {
-                                            value: "7"
+                                            value: "2900"
                                         }
 
                                     ]
