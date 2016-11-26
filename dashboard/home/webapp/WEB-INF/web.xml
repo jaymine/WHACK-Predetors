@@ -6,4 +6,13 @@
         metadata-complete="false"
         version="3.1">
 
+    <servlet>
+        <servlet-name> taskoutput</servlet-name>
+        <servlet-class>utils.servlets.TaskOutput</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>taskoutput</servlet-name>
+        <url-pattern>/taskoutput</url-pattern>
+    </servlet-mapping>
 </web-app>

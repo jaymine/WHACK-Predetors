@@ -4,6 +4,7 @@
 <%@page
 import= "java.io.*"
 import= "java.util.LinkedHashMap"
+import= "util.csvReader"
 import= "java.util.List"
 import= "java.util.ArrayList"
 %>
@@ -25,7 +26,7 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #b6d5d6;
+    background-color: #d2d7dd;
 }
 </style>
 <head>
@@ -39,38 +40,15 @@ tr:nth-child(even) {
 
 <body ng-app="DeploymentMonitor"  ng-controller="AppCtrl" ng-cloak >
 
+<%
+csvReader reader = new csvReader();
+
+%>
+
+
  <md-subheader class="md-primary" ng-style="{width:'100%'}">.</md-subheader>
- <h3> Ranking </h3>
  <br>
 <div layout="raw" layout-align="space-around stretch">
-
-
-<md-sidenav
-        class="md-sidenav-left"
-        md-component-id="left"
-        md-is-locked-open="$mdMedia('gt-md')"
-        md-whiteframe="4">
-
-      <md-toolbar class="md-theme-indigo" ng-style="{color:'#638980'}">
-        <h2 class="md-toolbar-tools">Filter by</h2>
-      </md-toolbar>
-      <div layout="column" layout-align="space-between start">
-        <md-button  class="md-primary" ng-click = "toMap()">
-          Country
-        </md-button>
-        <md-button  class="md-primary">
-          Networth <input type="text" ng-style="{width:'50px'}"}/> to <input type="text" ng-style="{width:'50px'}"/>
-        </md-button>
-      </div>
-      <md-toolbar class="md-theme-indigo" ng-style="{color:'#638980'}">
-          <h2 class="md-toolbar-tools">Display</h2>
-      </md-toolbar>
-      <div layout="column" layout-align="space-between start">
-          <md-button  class="md-primary" ng-click="toList()">
-             View All
-          </md-button>
-      </div>
-</md-sidenav>
 
  <form name="form" action="companyProfile.jsp" method="GET">
  <input type="hidden" id="name" name="name" value="" />
@@ -91,7 +69,7 @@ tr:nth-child(even) {
     <td>{{ company.country }}</td>
     <td>N/A</td>
     <td>{{ company.time }}</td>
-    <td>{{ company.time }}</td>
+    <td>{{company.p}}%</td>
   </tr>
 </table>
 
@@ -128,11 +106,7 @@ tr:nth-child(even) {
                  document.form.submit();
             }
 
-             $scope.companies = [
-                { name: 'Janet Perkins', country: 'NA', time: 12},
-                { name: 'Mary Johnson', country: 'SA', time: 145 },
-                { name: 'Peter Carlsson', country: 'SA', time: 45}
-              ];
+             $scope.companies = <%= reader.read()%>
 
         });
 

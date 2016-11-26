@@ -25,44 +25,65 @@ import= "java.util.ArrayList"
 <body ng-app="DeploymentMonitor"  ng-controller="AppCtrl" ng-cloak >
 <div layout="column" layout-align="center center">
 
-<md-subheader class="md-primary" ng-style="{width:'100%'}">.</md-subheader>
+<md-subheader class="md-primary" ng-style="{width:'100%','left-padding':'50'}">Company profile</md-subheader>
 
+<div layout="row" layout-align="space-around center">
 <h2><%= request.getParameter("name")%></h2>
 
  <md-button md-no-ink class="md-raised md-warn" layout layout-align="center center">
  <span>Predicted Time to become a customer<br> 145 </span>
  </md-button>
+</div>
 
   <md-content ng-style="{'width':'85%', 'boarder':'5px solid grey'}">
      <md-tabs md-dynamic-height md-border-bottom>
       <md-tab label="Suggestions">
          <md-content class="md-padding">
-           <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+           <h2 class="md-display-2">Suggestions</h2>
+           <p>Invite to Wso2 IS mobile connector webinar </p>
+           <p>Send a mail attaching How to configure WSO2 IS mobile connector white paper</p>
+           <p>Send a mail attaching How to configure WSO2 SAML metadata white paper</p>
+           <p>Send a mail attaching How to configure travelocity SAML configuration white paper</p>
          </md-content>
       </md-tab>
        <md-tab label="Recent Activities">
             <md-content class="md-padding">
-              <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+              <h2 class="md-display-2">Recent Activities</h2>
+              <p>"john@zooyork.com"Download Wso2 IS 5.2.0 </p>
+              <p>"elizabeth@zooyork.com":Visited White paper: How to configure SAML Service Provider</p>
+              <p>"farrok@zooyork.com":Visited White paper: How to configure SAML Identity Provider</p>
+              <p>"hannah@zooyork.com":Attended Webinar on LDAP user store</p>
+              <p>"johny@zooyork.com":Download Wso2 API mannager</p>
             </md-content>
        </md-tab>
        <md-tab label="BANT USERS">
          <md-content class="md-padding">
            <h2 class="md-display-2">BANT qualified Users</h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi.</p>
+           <p>john@zooyork.com </p>
+           <p>farook@zooyork.com </p>
+           <p>nathasha@zooyork.com </p>
+           <p>sammy@zooyork.com </p>
+           <p>bravo@zooyork.com </p>
          </md-content>
        </md-tab>
        <md-tab label="SQL USERS">
          <md-content class="md-padding">
            <h2 class="md-display-2">SQL Users</h2>
-           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla venenatis ante augue. Phasellus volutpat neque ac dui mattis vulputate. Etiam consequat aliquam cursus. In sodales pretium ultrices. Maecenas lectus est, sollicitudin consectetur felis nec, feugiat ultricies mi. Aliquam erat volutpat. Nam placerat, tortor in ultrices porttitor, orci enim rutrum enim, vel tempor sapien arcu a tellus. Vivamus convallis sodales ante varius gravida. Curabitur a purus vel augue ultrices ultricies id a nisl. Nullam malesuada consequat diam, a facilisis tortor volutpat et. Sed urna dolor, aliquet vitae posuere vulputate, euismod ac lorem. Sed felis risus, pulvinar at interdum quis, vehicula sed odio. Phasellus in enim venenatis, iaculis tortor eu, bibendum ante. Donec ac tellus dictum neque volutpat blandit. Praesent efficitur faucibus risus, ac auctor purus porttitor vitae. Phasellus ornare dui nec orci posuere, nec luctus mauris semper.</p>
-           <p>Morbi viverra, ante vel aliquet tincidunt, leo dolor pharetra quam, at semper massa orci nec magna. Donec posuere nec sapien sed laoreet. Etiam cursus nunc in condimentum facilisis. Etiam in tempor tortor. Vivamus faucibus egestas enim, at convallis diam pulvinar vel. Cras ac orci eget nisi maximus cursus. Nunc urna libero, viverra sit amet nisl at, hendrerit tempor turpis. Maecenas facilisis convallis mi vel tempor. Nullam vitae nunc leo. Cras sed nisl consectetur, rhoncus sapien sit amet, tempus sapien.</p>
-           <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+            <p>phelix@zooyork.com </p>
+                       <p>camaron@zooyork.com </p>
+                       <p>hilaria@zooyork.com </p>
+                       <p>jane@zooyork.com </p>
+                       <p>colron@zooyork.com </p>
          </md-content>
        </md-tab>
        <md-tab label="RAW LEADS">
          <md-content class="md-padding">
-           <h1 class="md-display-2">Raw LEADS</h1>
-           <p>Integer turpis erat, porttitor vitae mi faucibus, laoreet interdum tellus. Curabitur posuere molestie dictum. Morbi eget congue risus, quis rhoncus quam. Suspendisse vitae hendrerit erat, at posuere mi. Cras eu fermentum nunc. Sed id ante eu orci commodo volutpat non ac est. Praesent ligula diam, congue eu enim scelerisque, finibus commodo lectus.</p>
+           <h2 class="md-display-2">Raw LEADS</h2>
+           <p>silvia@zooyork.com </p>
+                      <p>sharuk@zooyork.com </p>
+                      <p>ashen@zooyork.com </p>
+                      <p>jaynthi@zooyork.com </p>
+                      <p>jehan@zooyork.com </p>
          </md-content>
        </md-tab>
      </md-tabs>
