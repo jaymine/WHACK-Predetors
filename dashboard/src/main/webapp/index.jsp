@@ -25,7 +25,7 @@ import= "java.util.ArrayList"
 
         <div layout="row" layout-align="space-between center">
 
-                <img ng-src="img/logo.png" ng-style="{height:'60px'}"/>
+                <h1>Intelligent Marketing </h1>
 
                 <md-nav-bar md-selected-nav-item="currentNavItem" nav-bar-aria-label="navigation links">
                   <md-nav-item md-nav-click="goto('home')" name="index.html" class="md-secondary">

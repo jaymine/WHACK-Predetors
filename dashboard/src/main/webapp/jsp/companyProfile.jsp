@@ -36,7 +36,7 @@ csvReader reader = new csvReader();
 
 %>
  <md-button md-no-ink class="md-raised md-warn" layout layout-align="center center">
- <span>Predicted Time to become a customer<br> <%= reader.getTime(request.getParameter("name"))%> </span>
+ <span>Predicted Time to become a customer<br> <%= reader.getTime(request.getParameter("name"))%> days </span>
  </md-button>
 
 <md-button md-no-ink class="md-raised md-primary" layout layout-align="center center">
