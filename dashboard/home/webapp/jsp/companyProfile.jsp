@@ -5,6 +5,7 @@
 import= "java.io.*"
 import= "java.util.LinkedHashMap"
 import= "java.util.List"
+import= "util.csvReader"
 import= "java.util.ArrayList"
 %>
 
@@ -30,8 +31,16 @@ import= "java.util.ArrayList"
 <div layout="row" layout-align="space-around center">
 <h2><%= request.getParameter("name")%></h2>
 
+<%
+csvReader reader = new csvReader();
+
+%>
  <md-button md-no-ink class="md-raised md-warn" layout layout-align="center center">
- <span>Predicted Time to become a customer<br> 145 </span>
+ <span>Predicted Time to become a customer<br> <%= reader.getTime(request.getParameter("name"))%> </span>
+ </md-button>
+
+<md-button md-no-ink class="md-raised md-primary" layout layout-align="center center">
+ <span>Priority of the customer<br> <%= reader.getP(request.getParameter("name"))%>% </span>
  </md-button>
 </div>
 
@@ -40,16 +49,16 @@ import= "java.util.ArrayList"
       <md-tab label="Suggestions">
          <md-content class="md-padding">
            <h2 class="md-display-2">Suggestions</h2>
-           <p>Invite to Wso2 IS mobile connector webinar </p>
-           <p>Send a mail attaching How to configure WSO2 IS mobile connector white paper</p>
-           <p>Send a mail attaching How to configure WSO2 SAML metadata white paper</p>
-           <p>Send a mail attaching How to configure travelocity SAML configuration white paper</p>
+           <p>Invite to Wso2 IS mobile connector webinar <md-button class="md-primary">Invite</md-button></p>
+           <p>Send a mail attaching How to configure WSO2 IS mobile connector white paper<md-button class="md-primary">SEND</md-button></p>
+           <p>Send a mail attaching How to configure WSO2 SAML metadata white paper <md-button class="md-primary">SEND</md-button></p>
+           <p>Send a mail attaching How to configure travelocity SAML configuration white paper <md-button class="md-primary">SEND</md-button></p>
          </md-content>
       </md-tab>
        <md-tab label="Recent Activities">
             <md-content class="md-padding">
               <h2 class="md-display-2">Recent Activities</h2>
-              <p>"john@zooyork.com"Download Wso2 IS 5.2.0 </p>
+              <p>"john@zooyork.com"Download Wso2 IS 5.2.0</p>
               <p>"elizabeth@zooyork.com":Visited White paper: How to configure SAML Service Provider</p>
               <p>"farrok@zooyork.com":Visited White paper: How to configure SAML Identity Provider</p>
               <p>"hannah@zooyork.com":Attended Webinar on LDAP user store</p>

@@ -26,7 +26,8 @@ td, th {
 }
 
 tr:nth-child(even) {
-    background-color: #d2d7dd;
+    background-color: #898564;
+    color: #fffffd
 }
 </style>
 <head>
@@ -64,7 +65,7 @@ csvReader reader = new csvReader();
   </tr>
   <tr ng-repeat="company in companies">
         <td>
-        <md-button md-no-ink class="md-primary" ng-click="send(company.name)">{{ company.name }}</></md-button>
+        <md-button md-no-ink class="md-primary" ng-click="send(company.name)"><b>{{ company.name }}</b></md-button>
         </td>
     <td>{{ company.country }}</td>
     <td>N/A</td>

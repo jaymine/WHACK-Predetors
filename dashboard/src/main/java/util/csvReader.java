@@ -36,4 +36,40 @@ public class csvReader {
 
     }
 
+    public String  getTime (String name) {
+
+        try {
+            CSVReader reader = new CSVReader(new FileReader("home/csv/yourfile.csv"));
+
+
+            List<String[]> myEntries = reader.readAll();
+            for (String[] array : myEntries) {
+                if(array[0].equals(name)){
+                    return array[1];
+                }
+            }
+
+        }
+        catch(Exception ex){return "0";}
+        return "0";
+    }
+
+    public String  getP (String name) {
+
+        try {
+            CSVReader reader = new CSVReader(new FileReader("home/csv/yourfile.csv"));
+
+
+            List<String[]> myEntries = reader.readAll();
+            for (String[] array : myEntries) {
+                if(array[0].equals(name)){
+                    return array[3];
+                }
+            }
+
+        }
+        catch(Exception ex){return "0";}
+        return "0";
+    }
+
 }
